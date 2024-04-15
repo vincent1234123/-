@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 
 
 import sys
-sys.setrecursionlimit(1000000) #例如这里设置为十万
+sys.setrecursionlimit(1000000)
 
-###可能需要移植到C++
+
 def use_8_connect_to_clear_img(img,p_max=10,p_min=0.1):
     area_t = 0
     min_x=10000
