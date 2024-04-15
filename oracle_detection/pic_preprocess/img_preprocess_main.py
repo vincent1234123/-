@@ -8,7 +8,7 @@ from linear_gray_degree_transformation import RGB2gray,linear_gray_degree_transf
 from OTSU_byte_value import otsu_binarization
 from eight_connect import use_8_connect_to_clear_img
 
-sys.setrecursionlimit(1000000) #例如这里设置为十万
+sys.setrecursionlimit(1000000)
 
 
 
