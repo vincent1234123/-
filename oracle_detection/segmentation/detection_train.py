@@ -14,7 +14,7 @@ device=torch.device('cuda')
 
 ###load data
 train_pics=np.load('train_pics.npy')
-path="F:/files/datas/2_Train"
+path="Your data path"
 batch_size=64
 ratios=np.load('train_pic_ratios.npy')
 def load_data(batch_size=64):
