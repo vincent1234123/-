@@ -11,23 +11,6 @@ import matplotlib.pyplot as plt
 from last_question_data_preprocess import pic_preprocess
 
 
-# def preprocess_pic(img,size=(800,800)):
-#     img=torch.tensor(img).unsqueeze(0).unsqueeze(0)
-#     img=F.interpolate(img,size)
-#     return np.array(img[0,0])
-#
-#
-# path="F:/files/datas/4_Recognize/test"
-# img_s=[]
-# for root,_,files in os.walk(path):
-#     for filename in files:
-#         img=Image.open(os.path.join(root,filename))
-#         img=np.array(img)
-#         img=preprocess_pic(img)
-#         img_s.append(img)
-# img_s=np.array(img_s)
-# np.save('last_question_pics.npy',img_s)
-# exit()
 
 
 device=torch.device('cuda')
