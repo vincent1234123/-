@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 train_pics=np.load('train_pics.npy')
-path="F:/files/datas/2_Train"
+path="Your data path"
 batch_size=64
 ratios=np.load('train_pic_ratios.npy')
 
