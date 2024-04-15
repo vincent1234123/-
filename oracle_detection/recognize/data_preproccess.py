@@ -7,13 +7,13 @@ import matplotlib.pyplot as plt
 
 
 
-path="F:/files/datas/4_Recognize/train"
+path="data path"
 def traversal_folder(folder_path):
     img_s=[]
     dirs=[]
     labels=[]
     kk=0
-    id=-2
+    id=-1
     for root,dirs_t,files in os.walk(folder_path):
         id+=1
         print(id)
