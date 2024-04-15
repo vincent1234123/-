@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 
 
 import sys
-sys.setrecursionlimit(1000000) #例如这里设置为十万
+sys.setrecursionlimit(1000000)
 
-###可能需要移植到C++
+
 def use_8_connect_to_clear_img(img,p_max=10,p_min=0.1):
     area_t = 0
     min_x=10000
@@ -40,38 +40,8 @@ def use_8_connect_to_clear_img(img,p_max=10,p_min=0.1):
         dfs(x-1,y+1,id)
         dfs(x-1,y,id)
         dfs(x-1,y-1,id)
-        # if labels[min(x+1,H-1),y]==0 and img[min(x+1,H-1),y]==1:
-        #     dfs(min(x+1,H-1),y,id)
-        # if labels[x,min(y+1,W-1)]==0 and img[x,min(y+1,W-1)]==1:
-        #     dfs(x,min(y+1,W-1),id)
-        # if labels[x,max(y-1,0)]==0 and img[x,max(y-1,0)]==1:
-        #     dfs(x,max(y-1,0),id)
-        # if labels[max(x-1,0),y]==0 and img[max(x-1,0),y]==1:
-        #     dfs(max(x-1,0),y,id)
-        # if x+1<H and y+1<W:
-        #     xx=x+1
-        #     yy=y+1
-        #     if labels[xx,yy]==0 and img[xx,yy]==1:
-        #         dfs(xx,yy,id)
-        #
-        # if x - 1 >= 0 and y + 1 < W:
-        #     xx = x - 1
-        #     yy = y + 1
-        #     if labels[xx, yy] == 0 and img[xx, yy] == 1:
-        #         dfs(xx, yy, id)
-        #
-        # if x - 1 >= 0 and y -1 >= 0:
-        #     xx = x - 1
-        #     yy = y - 1
-        #     if labels[xx, yy] == 0 and img[xx, yy] == 1:
-        #         dfs(xx, yy, id)
-        # if x + 1 < H and y - 1 >= W:
-        #     xx = x + 1
-        #     yy = y - 1
-        #     if labels[xx, yy] == 0 and img[xx, yy] == 1:
-        #         dfs(xx, yy, id)
 
-    block_poses=[]###由于是联通的所以保存块只用一个坐标即可
+    block_poses=[]
     block_areas=[]
     block_frames=[]
     H,W=img.shape
