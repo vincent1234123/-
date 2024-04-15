@@ -26,7 +26,7 @@ Net=Net.to(device)
 
 ###load_data
 train_pics=np.load('train_pics.npy')
-path="F:/files/datas/2_Train"
+path="Your data path"
 batch_size=64
 ratios=np.load('train_pic_ratios.npy')
 def load_data(batch_size=64):
@@ -40,10 +40,6 @@ def load_data(batch_size=64):
         img_dict['ann']=np.array(img_dict['ann'])
         ratio=ratios[id]
         img_dict['ann']=img_dict['ann']*np.array([ratio[1],ratio[0],ratio[1],ratio[0],1])
-        # img_dict['boxes']=torch.tensor(img_dict['ann'][:,:-1])
-        # img_dict['labels']=torch.tensor(img_dict['ann'][:,-1]).long()
-        # del img_dict['img_name']
-        # del img_dict['ann']
         batch_labels.append(img_dict)
     return batch_pics,batch_labels
 
