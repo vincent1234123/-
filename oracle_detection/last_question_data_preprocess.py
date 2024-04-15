@@ -7,10 +7,6 @@ from pic_preprocess.OTSU_byte_value import otsu_binarization
 from Recognize.eight_connect_recognize import use_8_connect_to_clear_img
 
 
-
-###待改进(应用第一问的相关方法)
-
-
 def img_reverse(img):
     H,W=img.shape
     if img[0:10,0:10].mean()<100 or img[H-1-10:H-1,0:10].mean()<100 or img[H-1-10:H-1,W-1-10:W-1].mean()<100 or img[0:10,W-1-10:W-1].mean()<100:
