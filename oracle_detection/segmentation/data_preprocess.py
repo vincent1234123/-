@@ -57,13 +57,6 @@ for i in range(1,6083):
     img_dict=json.load(f)
     img_s.append(img)
     img_dics.append(img_dict)
-    # img=print_windows(img,img_dict)
-    # print(img)
-    # print(img_dict)
-    #
-    # print(img_dict['ann'])
-    # plt.imshow(img,cmap='gray')
-    # plt.show()
 img_s=np.array(img_s)
 ratios=np.array(ratios)
 print(ratios.shape)
